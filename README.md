@@ -1,16 +1,99 @@
-# React + Vite
+# **ReadAble**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Making text readable and audible for everyone.👁️‍🗨️🗣️** 
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **Overview**
 
-## React Compiler
+ReadAble is a **web application** designed to assist users with **visual impairments or reading difficulties**. Upload an image, and the app will:
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Detect text** using **OCR (Tesseract.js)**
+* **Read it aloud** with built-in **Text-to-Speech (TTS)**
+* **Translate text** into different languages (demo-ready, expandable to real APIs)
 
-## Expanding the ESLint configuration
+Built with **React (Vite)**, it’s **fast, lightweight, and browser-based**, requiring **no installation or server setup**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## **Features**
+
+* 🖼️ **Image Upload** – Easily upload any image or photo
+* 📝 **Text Extraction** – Accurate text recognition using OCR
+* 🔊 **Text-to-Speech** – Listen to extracted text immediately
+* 🌐 **Translation** – Translate text into other languages
+* ✨ **Smooth UI** – Framer Motion animations for a polished user experience
+
+---
+
+## **Tech Stack**
+
+* **Frontend:** React + Vite
+* **OCR:** Tesseract.js (client-side later server side)
+* **Text-to-Speech:** Browser-native TTS
+* **Hosting / Backend :** Firebase Hosting & Functions
+* **Animations:** Framer Motion
+
+---
+
+## **Demo**
+
+[Not Yet Live]
+
+---
+
+## **Getting Started**
+
+### **1. Clone the repo**
+
+```bash
+git clone https://github.com/PiyushRatan/readable.git
+cd readable
+```
+
+### **2. Install dependencies**
+
+```bash
+npm install
+``` 
+
+### **3. Run locally**
+
+```bash
+npm run dev
+```
+
+### **4. Build for production**
+
+```bash
+npm run build
+```
+
+### **5. Deploy (Firebase)**
+
+```bash
+firebase deploy
+```
+
+---
+
+## **Future Improvements**
+
+* Real translation API integration (LibreTranslate, DeepL)
+* Multi-page image or PDF support
+* Voice commands for hands-free operation
+* Downloadable audio files for extracted text
+
+---
+
+## **Impact**
+
+ReadAble empowers people with **visual challenges** to **read, understand, and interact with text independently**, making information **accessible to everyone**.
+
+---
+
+## **Contributors**
+
+* **Piyush Ratan** – Full-stack developer, UI & accessibility enthusiast
+
+---
