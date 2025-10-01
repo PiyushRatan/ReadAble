@@ -5,6 +5,7 @@ function OCRComponent() {
   const [text, setText] = useState("");
   const [translatedText, setTranslatedText] = useState("");
   const [loading, setLoading] = useState(false);
+  const [ocrData, setOcrData] = useState();
 
   const handleFile = (event) => {
     const file = event.target.files[0];
@@ -13,7 +14,9 @@ function OCRComponent() {
     setLoading(true);
 
     Tesseract.recognize(file, "eng", {
-      logger: (m) => console.log(m), // progress log
+      logger: (m) => {
+         setOcrData(m);
+      },
     })
       .then(({ data: { text } }) => {
         setText(text);
@@ -44,6 +47,12 @@ function OCRComponent() {
       <input type="file" accept="image/*" onChange={handleFile} />
 
       {loading && <p>Processing OCR...</p>}
+      {ocrData && (
+        <>
+          <p>Progress :</p>
+          <p>{ocrData.progress ? (ocrData.progress * 100).toFixed(2) : 0}%</p>
+        </>
+      )}
 
       {text && (
         <div style={{ marginTop: "1rem" }}>
